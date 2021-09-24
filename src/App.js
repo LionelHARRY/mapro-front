@@ -1,6 +1,4 @@
 import React from 'react';
-//import Footer from "./components/Footer";
-//import mainbg from './image/main-bg.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signin from './components/Signin/Signin';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -10,6 +8,7 @@ import useToken from './components/App/useToken';
 function App() {
   const { token, setToken } = useToken();
 
+  //If token not avalable
   if(!token){
     return <Signin setToken={setToken}/>
   }
